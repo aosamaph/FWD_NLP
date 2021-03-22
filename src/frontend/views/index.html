@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWD NLP aosamaph</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            FWD - Neutral Language Processing
+        </div>
+
+        <div class="my-content">
+            <form>
+                <input type="text" name="ArticleLink" id="txt_articleLink" placeholder="Enter your URL here...">
+                <button id="submitButton" type="submit">Analyze</button>
+            </form>
+
+            <div class="result" id='result'>
+                <div>Text:</div>
+                <div id='text'></div>
+                <div>Score Tag:</div>
+                <div id='score_tag'></div>
+                <div>Agreement:</div>
+                <div id='agreement'></div>
+                <div>Subjectivity:</div>
+                <div id='subjectivity'></div>
+                <div>Confidence:</div>
+                <div id='confidence'></div>
+                <div>Irony:</div>
+                <div id='irony'></div>
+            </div>
+
+            <div class="result" id='error' hidden>
+                <div id='error_message'></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            copy rights
+        </div>
+    </div>
+
+    <script>
+        try {
+
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performance
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        }
+        catch (err) {
+
+        }
+    </script>
+</body>
+
+</html>

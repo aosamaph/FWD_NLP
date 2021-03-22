@@ -1,0 +1,43 @@
+.my-content{
+    background-color: rgb(250, 250, 250);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    
+    form{
+        border: 2px solid gray;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+
+        input{
+            padding: 1px;
+            height: 25px;
+        }
+
+        button{
+            background-color: lightblue;
+            border: none;
+            padding: 15px;
+            width: 25%;
+            display: block;
+            margin: 10px;
+
+            &:hover{
+                background-color: blue;
+            }
+        }
+
+    }
+
+    .result{
+        border: 2px gray solid;
+        border-radius: 10px;
+        margin: 20px;
+        margin-top: 0px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

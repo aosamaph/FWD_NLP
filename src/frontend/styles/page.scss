@@ -1,0 +1,12 @@
+.page{
+    height: 100vh;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
