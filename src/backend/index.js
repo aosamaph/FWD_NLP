@@ -9,6 +9,12 @@ app.use(express.json())
 
 // app.options('*', cors())
 
+app.use(express.static('dist'))
+
+app.get('/', (req, res) => {
+    res.sendFile('dist/index.html')
+})
+
 app.post('/analyse', async function (req, res) {
     meaningCloud.AnalyzeArticle(req.query.articleLink)
         .then((MCResponse) => {
